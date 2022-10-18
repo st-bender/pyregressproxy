@@ -9,7 +9,7 @@ dependencies:
     - pybind11
     - celerite
     - pymc3
-    - pymc4
+    - pymc>=4
     - nbsphinx
     - numpydoc
     - ipython
