@@ -187,7 +187,8 @@ class ProxyModel(Model):
 		phi_intp=None, fit_phase=False,
 		lifetime_prior=None, lifetime_metric=1.,
 		days_per_time_unit=365.25,
-		*args, **kwargs,
+		*args,
+		**kwargs
 	):
 		self.mean = 0.
 		if center:
@@ -406,7 +407,7 @@ class ProxyModelSet(ModelSet):
 def setup_proxy_model_with_bounds(
 	times, values,
 	max_amp=1e10, max_days=100,
-	**kwargs,
+	**kwargs
 ):
 	# extract setup from `kwargs`
 	center = kwargs.get("center", False)
