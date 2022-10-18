@@ -22,7 +22,6 @@ jobs:
           - python-version: "3.8"
             extras: "pymc3"
             allow-failure: true
-        include:
           - python-version: "3.8"
             extras: "pymc4"
             allow-failure: true
