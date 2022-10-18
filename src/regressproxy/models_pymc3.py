@@ -326,9 +326,9 @@ def setup_proxy_model_pymc3(
 		else:
 			amp = pm.Normal("amp", mu=0.0, sigma=max_amp)
 		if fit_lag:
-			lag = pm.LogNormal("lag", mu=0.0, sigma=np.log(max_days))
+			lag = pm.Lognormal("lag", mu=0.0, sigma=np.log(max_days))
 		if lifetime_scan > 0:
-			tau0 = pm.LogNormal("tau0", mu=0.0, sigma=np.log(max_days))
+			tau0 = pm.Lognormal("tau0", mu=0.0, sigma=np.log(max_days))
 			cos1 = pm.Normal("tau_cos1", mu=0.0, sigma=max_amp)
 			sin1 = pm.Normal("tau_sin1", mu=0.0, sigma=max_amp)
 			harm1 = HarmonicModelCosineSine(harm_freq, cos1, sin1)
