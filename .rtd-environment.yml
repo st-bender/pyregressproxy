@@ -1,0 +1,18 @@
+name: regressproxy
+
+channels:
+    - conda-forge
+
+dependencies:
+    - python=3
+    - numpy
+    - pybind11
+    - celerite
+    - pymc3
+    - pymc4
+    - nbsphinx
+    - numpydoc
+    - ipython
+    - pip
+    - pip:
+        - sphinx-markdown-tables
