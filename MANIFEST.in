@@ -1,0 +1,9 @@
+graft docs
+graft src
+graft tests
+prune docs/_build
+
+include LICENSE
+include *.md
+
+global-exclude *.py[cod] __pycache__ *.so *.dylib *.git *.swp
