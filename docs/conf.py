@@ -100,7 +100,7 @@ html_context = dict(
     display_github=True,
     github_user="st-bender",
     github_repo="pyregressproxy",
-    github_version="master",
+    github_version="main",
     conf_py_path="/docs/",
 )
 html_static_path = ["_static"]

@@ -1,9 +1,9 @@
 # Proxy classes for regression analysis
 
-[![builds](https://github.com/st-bender/pyregressproxy/actions/workflows/ci_build_and_test.yml/badge.svg?branch=master)](https://github.com/st-bender/pyregressproxy/actions/workflows/ci_build_and_test.yml)
+[![builds](https://github.com/st-bender/pyregressproxy/actions/workflows/ci_build_and_test.yml/badge.svg?branch=main)](https://github.com/st-bender/pyregressproxy/actions/workflows/ci_build_and_test.yml)
 [![docs](https://rtfd.org/projects/pyregressproxy/badge/?version=latest)](https://pyregressproxy.rtfd.io/en/latest/?badge=latest)
 [![coveralls](https://coveralls.io/repos/github/st-bender/pyregressproxy/badge.svg)](https://coveralls.io/github/st-bender/pyregressproxy)
-[![scrutinizer](https://scrutinizer-ci.com/g/st-bender/pyregressproxy/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/st-bender/pyregressproxy/?branch=master)
+[![scrutinizer](https://scrutinizer-ci.com/g/st-bender/pyregressproxy/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/st-bender/pyregressproxy/?branch=main)
 
 ## Overview
 

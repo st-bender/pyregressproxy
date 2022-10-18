@@ -8,7 +8,7 @@ including lagging and variable finite life time.
 
 The source code is `developed on Github <https://github.com/st-bender/pyregressproxy>`_.
 
-.. image:: https://github.com/st-bender/pyregressproxy/actions/workflows/ci_build_and_test.yml/badge.svg?branch=master
+.. image:: https://github.com/st-bender/pyregressproxy/actions/workflows/ci_build_and_test.yml/badge.svg?branch=main
     :target: https://github.com/st-bender/pyregressproxy/actions/workflows/ci_build_and_test.yml
     :alt: builds
 .. image:: https://readthedocs.org/projects/pyregressproxy/badge/?version=latest
@@ -29,8 +29,8 @@ The source code is `developed on Github <https://github.com/st-bender/pyregressp
 .. image:: https://coveralls.io/repos/github/st-bender/pyregressproxy/badge.svg
     :target: https://coveralls.io/github/st-bender/pyregressproxy
     :alt: coveralls
-.. image:: https://scrutinizer-ci.com/g/st-bender/pyregressproxy/badges/quality-score.png?b=master
-    :target: https://scrutinizer-ci.com/g/st-bender/pyregressproxy/?branch=master
+.. image:: https://scrutinizer-ci.com/g/st-bender/pyregressproxy/badges/quality-score.png?b=main
+    :target: https://scrutinizer-ci.com/g/st-bender/pyregressproxy/?branch=main
     :alt: scrutinizer
 
 .. toctree::
