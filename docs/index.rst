@@ -1,4 +1,4 @@
-.. pyregressproxy documentation master file
+.. pyregressproxy documentation main file
 
 pyregressproxy
 ==============

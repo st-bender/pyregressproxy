@@ -31,7 +31,7 @@ if getenv("SPELLCHECK"):
     spelling_show_suggestions = True
     spelling_lang = "en_GB"
 
-master_doc = "index"
+main_doc = "index"
 
 language = None
 
@@ -51,7 +51,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (
-        master_doc, "pyregressproxy.tex", u"pyregressproxy Documentation",
+        main_doc, "pyregressproxy.tex", u"pyregressproxy Documentation",
         u"Stefan Bender", "manual",
     ),
 ]
@@ -60,7 +60,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     (
-        master_doc, "pyregressproxy", u"pyregressproxy Documentation",
+        main_doc, "pyregressproxy", u"pyregressproxy Documentation",
         [author], 1,
     )
 ]
@@ -70,7 +70,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (
-        master_doc, "pyregressproxy", u"pyregressproxy Documentation",
+        main_doc, "pyregressproxy", u"pyregressproxy Documentation",
         author, "pyregressproxy", "Proxy models for regression analysis.",
         "Miscellaneous",
     ),
