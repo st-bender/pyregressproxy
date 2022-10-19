@@ -5,7 +5,7 @@
 [![package](https://img.shields.io/pypi/v/regressproxy.svg?style=flat)](https://pypi.org/project/regressproxy)
 [![wheel](https://img.shields.io/pypi/wheel/regressproxy.svg?style=flat)](https://pypi.org/project/regressproxy)
 [![pyversions](https://img.shields.io/pypi/pyversions/regressproxy.svg?style=flat)](https://pypi.org/project/regressproxy)
-[![codecov](https://codecov.io/gh/st-bender/pyregressproxy/badge.svg)](https://codecov.io/gh/st-bender/pyregressproxy)
+[![codecov](https://codecov.io/gh/st-bender/pyregressproxy/branch/main/graphs/badge.svg)](https://codecov.io/gh/st-bender/pyregressproxy)
 [![coveralls](https://coveralls.io/repos/github/st-bender/pyregressproxy/badge.svg)](https://coveralls.io/github/st-bender/pyregressproxy)
 [![scrutinizer](https://scrutinizer-ci.com/g/st-bender/pyregressproxy/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/st-bender/pyregressproxy/?branch=main)
 
