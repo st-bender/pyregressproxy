@@ -45,6 +45,10 @@ The source code is `developed on Github <https://github.com/st-bender/pyregressp
 
     reference/index
 
+.. toctree::
+    :maxdepth: 2
+    :caption: Releases
+
     CHANGES
 
 Indices and tables
