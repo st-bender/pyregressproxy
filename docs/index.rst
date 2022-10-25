@@ -23,7 +23,7 @@ The source code is `developed on Github <https://github.com/st-bender/pyregressp
 .. image:: https://img.shields.io/pypi/pyversions/regressproxy.svg?style=flat
     :target: https://pypi.org/project/regressproxy
     :alt: python
-.. image:: https://codecov.io/gh/st-bender/pyregressproxy/badge.svg
+.. image:: https://codecov.io/gh/st-bender/pyregressproxy/branch/main/graphs/badge.svg
     :target: https://codecov.io/gh/st-bender/pyregressproxy
     :alt: codecov
 .. image:: https://coveralls.io/repos/github/st-bender/pyregressproxy/badge.svg
