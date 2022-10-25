@@ -34,15 +34,10 @@ import numpy as np
 
 try:
 	import theano.tensor as tt
-except ImportError as err:
-	raise ImportError(
-		"The `theano` package is required for the `pymc3` model interface."
-	).with_traceback(err.__traceback__)
-try:
 	import pymc3 as pm
 except ImportError as err:
 	raise ImportError(
-		"The `pymc3` package is required for the `pymc3` model interface."
+		"The `pymc3` and `theano` packages are required for the `pymc3` model interface."
 	).with_traceback(err.__traceback__)
 
 __all__ = [

@@ -34,15 +34,10 @@ import numpy as np
 
 try:
 	import aesara.tensor as tt
-except ImportError as err:
-	raise ImportError(
-		"The `aesara` package is required for the `pymc4` model interface."
-	).with_traceback(err.__traceback__)
-try:
 	import pymc as pm
 except ImportError as err:
 	raise ImportError(
-		"The `pymc4` package is required for the `pymc4` model interface."
+		"The `aesara` and `pymc>=4` packages are required for the `pymc4` model interface."
 	).with_traceback(err.__traceback__)
 
 __all__ = [
