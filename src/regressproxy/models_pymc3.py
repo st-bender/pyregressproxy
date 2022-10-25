@@ -33,10 +33,10 @@ from warnings import warn
 import numpy as np
 
 try:
-	import aesara_theano_fallback.tensor as tt
+	import theano.tensor as tt
 except ImportError as err:
 	raise ImportError(
-		"The `aesara_theano_fallback` package is required for the `pymc3` model interface."
+		"The `theano` package is required for the `pymc3` model interface."
 	).with_traceback(err.__traceback__)
 try:
 	import pymc3 as pm

@@ -9,7 +9,7 @@ meta_path = path.join("src", name, "__init__.py")
 here = path.abspath(path.dirname(__file__))
 
 extras_require = {
-	"pymc3": ["pymc3>=3.10, <3.12", "aesara-theano-fallback>=0.0.2"],
+	"pymc3": ["pymc3>=3.10"],
 	"pymc4": ["pymc>=4"],
 	"tests": ["pytest"],
 }
