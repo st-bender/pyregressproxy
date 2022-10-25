@@ -232,7 +232,7 @@ class ProxyModel(Model):
 		for b in bs:
 			taufac *= tauexp
 			yp += taufac * np.interp(
-				t - (self.lag - b) / self.days_per_time_unit,
+				t - (self.lag + b) / self.days_per_time_unit,
 				self.times, self.values, left=0., right=0.,
 			)
 		return yp * self.dt
@@ -250,7 +250,7 @@ class ProxyModel(Model):
 		for b in bs:
 			taufac *= tauexp
 			ypg += b * taufac * np.interp(
-				t - (self.lag - b) / self.days_per_time_unit,
+				t - (self.lag + b) / self.days_per_time_unit,
 				self.times, self.values, left=0., right=0.,
 			)
 		return ypg * self.dt / tau**2
