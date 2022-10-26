@@ -40,6 +40,12 @@ The source code is `developed on Github <https://github.com/st-bender/pyregressp
     README
 
 .. toctree::
+    :maxdepth: 1
+    :caption: Tutorials
+
+    tutorials/proxy_model_intro
+
+.. toctree::
     :maxdepth: 2
     :caption: Reference
 
