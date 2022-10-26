@@ -23,6 +23,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.napoleon",
     "sphinx.ext.mathjax",
+    "nbsphinx",
     "recommonmark",
     "numpydoc"
 ]
@@ -76,6 +77,24 @@ texinfo_documents = [
     ),
 ]
 
+nbsphinx_prolog = r"""
+{% set docname = 'docs/' + env.doc2path(env.docname, base=None) %}
+
+.. module:: regressproxy
+
+.. note:: This tutorial was generated from an IPython notebook that can be
+          downloaded `here <https://github.com/st-bender/regressproxy/blob/main/{{ docname }}>`_.
+          Try a live version: |binderbadge|, or |nbviewer|__.
+
+.. |binderbadge| image:: https://mybinder.org/badge_logo.svg
+    :target: https://mybinder.org/v2/gh/st-bender/regressproxy/main?filepath={{ docname }}
+
+.. |nbviewer| replace:: view in *nbviewer*
+__ https://nbviewer.jupyter.org/github/st-bender/regressproxy/tree/main/{{ docname }}
+
+.. _{{ docname }}:
+"""
+
 # on_rtd is whether we are on readthedocs.org
 on_rtd = getenv("READTHEDOCS", None) == "True"
 if not on_rtd:
@@ -83,7 +102,7 @@ if not on_rtd:
     html_theme = "sphinx_rtd_theme"
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
-exclude_patterns = [u"_build", "Thumbs.db", ".DS_Store"]
+exclude_patterns = [u"_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints"]
 pygments_style = "default"
 templates_path = ["_templates"]
 html_use_smartypants = True
