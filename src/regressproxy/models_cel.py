@@ -384,7 +384,7 @@ class ProxyModel(Model):
 
 
 class ProxyModelSet(ModelSet):
-	"""Combined model class for trace gases (and probably other data)
+	"""Combined model class for, e.g. trace gases (and probably other data)
 
 	Inherited from :class:`celerite.ModelSet`, provides `get_value()`
 	and `compute_gradient()` methods.
@@ -492,7 +492,7 @@ def proxy_model_set(constant=True, freqs=None, proxy_config=None, **kwargs):
 
 	Returns
 	-------
-	model : :class:`TraceGasModelSet` (extends :class:`celerite.ModelSet`)
+	model : :class:`ProxyModelSet` (extends :class:`celerite.ModelSet`)
 	"""
 	fit_phase = kwargs.get("fit_phase", False)
 	scale = kwargs.get("scale", 1e-6)
