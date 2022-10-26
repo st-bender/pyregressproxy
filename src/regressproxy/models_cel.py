@@ -11,9 +11,9 @@
 """Proxy classes for regression analysis (celerite version)
 
 Proxy model classes for regression analysis using the
-:mod:`celerite` [#]_ modelling protocol.
+:mod:`celerite` modelling protocol [#]_.
 
-.. [#] https://celerite.readthedocs.io
+.. [#] https://celerite.readthedocs.io/en/stable/python/modeling/
 """
 from __future__ import absolute_import, division, print_function
 
