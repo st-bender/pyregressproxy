@@ -11,7 +11,7 @@
 """Proxy classes for regression analysis (pymc4/aesara version)
 
 Model classes for data regression proxies using
-:mod:`aesara` and :mod:`pymc4`.
+:mod:`aesara` and :mod:`pymc` (version 4).
 
 This interface is still experimental, it is available
 when installing the ``pymc4`` extra:
@@ -376,7 +376,7 @@ def proxy_model_set(constant=True, freqs=None, proxy_config=None, **kwargs):
 	Returns
 	-------
 	model, ModelSet, offset : tuple
-		The :class:`pymc4.Model` containing the random variables,
+		The :class:`pymc.Model` containing the random variables,
 		the :class:`ModelSet` with entries of type :class:`ProxyModel` as setup up
 		via ``proxy_config`` or with a default set. The offset is included
 		to keep pro-forma compatibility with the ``celerite`` model setup.

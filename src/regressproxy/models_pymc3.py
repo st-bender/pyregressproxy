@@ -387,7 +387,7 @@ def proxy_model_set(constant=True, freqs=None, proxy_config=None, **kwargs):
 	Returns
 	-------
 	model, ModelSet, offset : tuple
-		The :class:`pymc3.Model` containing the random variables,
+		The :class:`pymc3.model.Model` containing the random variables,
 		the :class:`ModelSet` with entries of type :class:`ProxyModel` as setup up
 		via ``proxy_config`` or with a default set. The offset is included
 		to keep pro-forma compatibility with the ``celerite`` model setup.
