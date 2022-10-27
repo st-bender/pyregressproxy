@@ -156,6 +156,30 @@ def _yy(x, c, s):
 	return np.ascontiguousarray(_ys, dtype=np.float64)
 
 
+def test_freq_list(xx):
+	fs = [1. / 365.25, 2. / 365.25]
+	# proxy "values"
+	values = _yy(xx, 0, 0)
+	amp = 3.
+	lag = 2.
+	tau0 = 1.
+	harms = [
+		HarmonicModelCosineSine(f, f * 365.25, 0)
+		for f in fs
+	]
+	tau_lt = LifetimeModel(harms, lower=0.)
+	proxy = ProxyModel(
+		xx, values,
+		amp=amp,
+		lag=lag,
+		tau0=tau0,
+		tau_harm=tau_lt,
+		tau_scan=10,
+		days_per_time_unit=1.,
+	)
+	assert np.any(proxy.get_value(xx).eval())
+
+
 @pytest.mark.long
 @pytest.mark.parametrize(
 	"f",
