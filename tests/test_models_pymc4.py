@@ -157,7 +157,7 @@ def _yy(x, c, s):
 	return np.ascontiguousarray(_ys, dtype=np.float64)
 
 
-def test_freq_list(xx):
+def test_proxy_lt_freq_list(xx):
 	fs = [1. / 365.25, 2. / 365.25]
 	# proxy "values"
 	values = _yy(xx, 0, 0)
