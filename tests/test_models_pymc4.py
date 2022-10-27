@@ -206,9 +206,9 @@ def test_proxy_pymc4(xx, f, c=3.0, s=1.0):
 		# amplitude
 		pamp = pm.Normal("amp", mu=0.0, sigma=4.0)
 		# lag
-		plag = pm.LogNormal("lag", mu=0.0, sigma=4.0, testval=1.0)
+		plag = pm.LogNormal("lag", mu=0.0, sigma=4.0, initval=1.0)
 		# lifetime
-		ptau0 = pm.LogNormal("tau0", mu=0.0, sigma=4.0, testval=1.0)
+		ptau0 = pm.LogNormal("tau0", mu=0.0, sigma=4.0, initval=1.0)
 		cos1 = pm.Normal("tau_cos1", mu=0.0, sigma=10.0)
 		sin1 = pm.Normal("tau_sin1", mu=0.0, sigma=10.0)
 		harm1 = HarmonicModelCosineSine(f, cos1, sin1)
