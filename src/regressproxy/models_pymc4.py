@@ -138,7 +138,7 @@ class LifetimeModel:
 	harmonics : HarmonicModelCosineSine or HarmonicModelAmpPhase or list
 	"""
 	def __init__(self, harmonics, lower=0.):
-		if not hasattr(harmonics, "getitem"):
+		if not hasattr(harmonics, "__getitem__"):
 			harmonics = [harmonics]
 		self.harmonics = harmonics
 		self.lower = tt.as_tensor_variable(lower).astype("float64")
