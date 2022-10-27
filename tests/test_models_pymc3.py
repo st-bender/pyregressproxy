@@ -198,8 +198,8 @@ def test_proxy_pymc3(xx, f, c=3.0, s=1.0):
 	# proxy "values"
 	values = _yy(xs, c, s)
 
-	yp = _test_data(xs, values, f, c, s)
-	yp += 0.5 * np.random.randn(xs.shape[0])
+	yp0 = _test_data(xs, values, f, c, s)
+	yp = yp0 + 0.5 * np.random.randn(xs.shape[0])
 
 	# using "name" prefixes all variables with <name>_
 	with pm.Model(name="proxy") as model:
@@ -228,6 +228,11 @@ def test_proxy_pymc3(xx, f, c=3.0, s=1.0):
 		log_jitter = pm.Normal("log_jitter", mu=0.0, sigma=4.0)
 		pm.Normal("obs", mu=prox1, sigma=pm.math.exp(log_jitter), observed=yp)
 
+		# test default values
+		p1 = prox1.eval({pamp: 3, plag: 2, ptau0: 1, cos1: c, sin1: s})
+		np.testing.assert_allclose(p1, yp0)
+
+		# test sampling and inference
 		maxlp0 = pm.find_MAP(progressbar=False)
 		trace = pm.sample(
 			chains=2,
