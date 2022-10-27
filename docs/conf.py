@@ -83,14 +83,14 @@ nbsphinx_prolog = r"""
 .. module:: regressproxy
 
 .. note:: This tutorial was generated from an IPython notebook that can be
-          downloaded `here <https://github.com/st-bender/regressproxy/blob/main/{{ docname }}>`_.
+          downloaded `here <https://github.com/st-bender/pyregressproxy/blob/main/{{ docname }}>`_.
           Try a live version: |binderbadge|, or |nbviewer|__.
 
 .. |binderbadge| image:: https://mybinder.org/badge_logo.svg
-    :target: https://mybinder.org/v2/gh/st-bender/regressproxy/main?filepath={{ docname }}
+    :target: https://mybinder.org/v2/gh/st-bender/pyregressproxy/main?filepath={{ docname }}
 
 .. |nbviewer| replace:: view in *nbviewer*
-__ https://nbviewer.jupyter.org/github/st-bender/regressproxy/tree/main/{{ docname }}
+__ https://nbviewer.jupyter.org/github/st-bender/pyregressproxy/tree/main/{{ docname }}
 
 .. _{{ docname }}:
 """
