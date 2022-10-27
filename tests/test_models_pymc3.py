@@ -25,6 +25,7 @@ try:
 		HarmonicModelAmpPhase,
 		LifetimeModel,
 		ProxyModel,
+		proxy_model_set,
 	)
 except ImportError:
 	pytest.skip("PyMC3/Theano interface not installed", allow_module_level=True)
@@ -178,6 +179,45 @@ def test_freq_list(xx):
 		days_per_time_unit=1.,
 	)
 	assert np.any(proxy.get_value(xx).eval())
+
+
+@pytest.mark.parametrize(
+	"f",
+	[1., 1. / 365.25]
+)
+def test_proxy_model_set(xx, f, c=3.0, s=1.0):
+	dx = 1. / (f * 365.25)
+	if f < 1.:
+		xs = xx * dx
+	else:
+		# convert to fractional years
+		xs = 1859 + (xx - 44.25) * dx
+	# proxy "values"
+	values = _yy(xs, c, s)
+
+	yp0 = _test_data(xs, values, f, c, s)
+
+	# test model_set setup
+	model, proxy, offset = proxy_model_set(
+		constant=False,
+		proxy_config={
+			"proxy": {
+				"times": xs,
+				"values": values,
+				"fit_lag": True,
+				"lifetime_scan": 10,
+				"days_per_time_unit": f * 365.25,
+			}
+		}
+	)
+	pt = proxy.get_value(xs).eval({
+		model["proxy_amp"]: 3,
+		model["proxy_lag"]: 2,
+		model["proxy_tau0"]: 1,
+		model["proxy_tau_cos1"]: c,
+		model["proxy_tau_sin1"]: s,
+	})
+	np.testing.assert_allclose(pt, yp0)
 
 
 @pytest.mark.long
