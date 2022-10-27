@@ -135,7 +135,7 @@ todo_include_todos = True
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3/", None),
     "numpy": ("https://numpy.org/doc/stable/", None),
-    "aesara": ("https://aesara.readthedocs.io/en/stable/", None),
+    "aesara": ("https://aesara.readthedocs.io/en/latest/", None),
     "celerite": ("https://celerite.readthedocs.io/en/stable/", None),
     "pymc3": ("https://docs.pymc.io/en/v3/", None),
     "pymc": ("https://docs.pymc.io/en/stable/", None),
