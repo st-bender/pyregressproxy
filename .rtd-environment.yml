@@ -8,7 +8,6 @@ dependencies:
     - numpy
     - pybind11
     - celerite
-    - pymc3
     - pymc>=4
     - nbsphinx
     - numpydoc

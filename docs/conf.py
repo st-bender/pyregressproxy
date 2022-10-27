@@ -32,6 +32,8 @@ if getenv("SPELLCHECK"):
     spelling_show_suggestions = True
     spelling_lang = "en_GB"
 
+autodoc_mock_imports = ["theano", "pymc3"]
+
 main_doc = "index"
 
 language = None
