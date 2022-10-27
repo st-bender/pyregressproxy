@@ -11,7 +11,7 @@
 """Proxy classes for regression analysis (celerite version)
 
 Proxy model classes for regression analysis using the
-:mod:`celerite` modelling protocol [#]_.
+:mod:`celerite.modeling` modelling protocol [#]_.
 
 .. [#] https://celerite.readthedocs.io/en/stable/python/modeling/
 """
