@@ -9,7 +9,7 @@
 
 This module contains regression proxy models with lag and finite lifetime.
 """
-__version__ = "0.0.2.dev0"
+__version__ = "0.0.2"
 
 # The standard version is the celerite model only
 from .models_cel import *
