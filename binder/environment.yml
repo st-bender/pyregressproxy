@@ -1,0 +1,13 @@
+name: regressproxy
+
+channels:
+    - conda-forge
+
+dependencies:
+    - python=3
+    - numpy
+    - pybind11
+    - celerite
+    - matplotlib
+    - pymc3
+    - pymc>=4
