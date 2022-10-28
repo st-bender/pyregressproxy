@@ -44,6 +44,7 @@ The source code is `developed on Github <https://github.com/st-bender/pyregressp
     :caption: Tutorials
 
     tutorials/proxy_model_intro
+    tutorials/proxy_model_pymc3
 
 .. toctree::
     :maxdepth: 2
