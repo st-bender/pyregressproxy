@@ -6,7 +6,8 @@ v0.0.2 (unreleased)
 
 ### New
 
-- Includes a simple tutorial in the documentation
+- Includes beginner tutorials for the "standard" and PyMC3 interfaces
+- Extended tests for better coverage
 
 ### Fixes
 
@@ -16,6 +17,7 @@ v0.0.2 (unreleased)
 ### Changes
 
 - Some code clean up
+- Updated documentation
 
 
 v0.0.1 (2022-10-19)
