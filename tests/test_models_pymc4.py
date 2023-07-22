@@ -295,3 +295,39 @@ def test_proxy_pymc4(xx, f, c=3.0, s=1.0):
 		(3., 2., 1., c, s, np.log(0.5)),
 		atol=4e-2, rtol=1e-2,
 	)
+
+
+@pytest.mark.long
+@pytest.mark.parametrize(
+	"interp",
+	[False, True],
+)
+@pytest.mark.parametrize(
+	"f",
+	[1., 1. / 365.25]
+)
+def test_linear(xx, f, interp, amp=3.0):
+	dx = 1. / (f * 365.25)
+	if f < 1.:
+		xs = 1859 + (xx - 44.25) * dx / 365.25
+	else:
+		# convert to fractional years
+		xs = 1859 + (xx - 44.25) * dx
+	# proxy "values"
+	values = ys(xs, 1, 2)
+
+	p0 = ProxyModel(
+		xs, values,
+		amp=amp,
+		days_per_time_unit=f * 365.25,
+	)
+	xt = np.concatenate([xs[:1] - 0.1, xs, xs[-1:] + 0.1])
+	expected = np.concatenate([[0.], amp * values, [0.]])
+	yp0 = p0.get_value(xt, interpolate=interp).eval()
+	np.testing.assert_allclose(yp0, expected)
+	if interp:
+		# test iterpolation for offset x
+		xt = xt - 0.001
+		expected = amp * np.interp(xt, xs, values, left=0., right=0.)
+		yp0 = p0.get_value(xt, interpolate=interp).eval()
+		np.testing.assert_allclose(yp0, expected)
