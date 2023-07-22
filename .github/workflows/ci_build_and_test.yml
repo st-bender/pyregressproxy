@@ -21,7 +21,7 @@ jobs:
         allow-failure: [false]
         include:
           - python-version: "2.7"
-            os: ubuntu-20.04
+            os: ubuntu-latest
             extras: ""
             allow-failure: true
           - python-version: "3.5"
