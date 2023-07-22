@@ -33,11 +33,18 @@ from warnings import warn
 import numpy as np
 
 try:
-	import aesara.tensor as tt
 	import pymc as pm
+	pymc_major = int(pm.__version__.split(".")[0])
+	if pymc_major == 4:
+		import aesara.tensor as tt
+	elif pymc_major == 5:
+		import pytensor.tensor as tt
+	else:
+		raise ImportError("Unsupported `pymc` version.")
 except ImportError as err:
 	raise ImportError(
-		"The `aesara` and `pymc>=4` packages are required for the `pymc4` model interface."
+		"The `aesara` and `pymc>=4` or `pytensor` and `pymc==5` packages "
+		"are required for the `pymc4` model interface."
 	).with_traceback(err.__traceback__)
 
 __all__ = [
