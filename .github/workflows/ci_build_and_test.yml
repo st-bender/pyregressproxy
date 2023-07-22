@@ -50,9 +50,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+        uses: MatteoH2O1999/setup-python@v1
         with:
           python-version: ${{ matrix.python-version }}
+          cache-build: true
+          cache: pip
       - name: Install dependencies
         run: |
           pip install "numpy>=1.13.0,!=1.15.*"
