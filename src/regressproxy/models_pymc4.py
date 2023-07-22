@@ -8,18 +8,19 @@
 # it under the terms of the GNU General Public License as published
 # by the Free Software Foundation, version 2.
 # See accompanying LICENSE file or http://www.gnu.org/licenses/gpl-2.0.html.
-"""Proxy classes for regression analysis (pymc4/aesara version)
+"""Proxy classes for regression analysis (pymc4/5 version)
 
-Model classes for data regression proxies using
-:mod:`aesara` and :mod:`pymc` (version 4).
+Model classes for data regression proxies for use with
+:mod:`pymc` versions 4 and 5.
 
 This interface is still experimental, it is available
-when installing the ``pymc4`` extra:
+when installing **either** the ``pymc4`` or ``pymc5`` extra:
 
 .. code-block:: bash
 
 	pip install "regressproxy[pymc4]"
 
+Due to dependency reasons, versions 4 and 5 are not supported together.
 The classes can be imported as usual, e.g. via:
 
 .. code-block:: python
