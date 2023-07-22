@@ -10,12 +10,13 @@ here = path.abspath(path.dirname(__file__))
 
 extras_require = {
 	"pymc3": ["pymc3>=3.10"],
-	"pymc4": ["pymc>=4"],
+	"pymc4": ["pymc>=4,<5"],
+	"pymc5": ["pymc>=5"],
 	"tests": ["pytest"],
 }
 extras_require["theano"] = extras_require["pymc3"]
 extras_require["all"] = sorted(
-	{v for req in extras_require.values() for v in req},
+	{v for req in {"pymc5", "tests"} for v in extras_require[req]}
 )
 
 
