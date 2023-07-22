@@ -32,11 +32,11 @@ jobs:
             os: ubuntu-20.04
             extras: ""
             allow-failure: true
-          - python-version: "3.8"
+          - python-version: "3.10"
             os: ubuntu-latest
             extras: "pymc3"
             allow-failure: true
-          - python-version: "3.8"
+          - python-version: "3.10"
             os: ubuntu-latest
             extras: "pymc4"
             allow-failure: true
