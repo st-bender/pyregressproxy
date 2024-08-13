@@ -245,16 +245,13 @@ class ProxyModel:
 		Corrects for a finite lifetime by summing over the last `tmax`
 		days with an exponential decay given of lifetime(s) `tau`.
 		"""
-		yp = tt.zeros(t.shape[:-1], dtype="float64")
-		tauexp = tt.exp(-self.dt / tau)
-		taufac = tt.ones(tau.shape[:-1], dtype="float64")
-		for b in self.bs:
-			taufac *= tauexp
-			yp += taufac * _interp(
-				t - b,
-				self.times, self.values,
-				interpolate=interpolate,
-			)
+		_taufacs = tt.pow(tt.exp(-self.dt / tau)[..., None], self.bs)
+		_y = _interp(
+			t[..., None] - self.bs / self.days_per_time_unit,
+			self.times, self.values,
+			interpolate=interpolate,
+		)
+		yp = (_y * _taufacs).sum(axis=-1)
 		return yp * self.dt
 
 	def get_value(self, t, interpolate=True):
