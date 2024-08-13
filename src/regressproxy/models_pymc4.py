@@ -161,7 +161,7 @@ class LifetimeModel:
 
 def _interp(x, xs, ys, fill_value=0., interpolate=True):
 	idx = xs.searchsorted(x, side="right")
-	out_of_bounds = tt.zeros(x.shape[:-1], dtype=bool)
+	out_of_bounds = tt.zeros(x.shape, dtype=bool)
 	out_of_bounds |= (x < xs[0]) | (x > xs[-1])
 	idx = tt.clip(idx, 1, xs.shape[0])
 	if not interpolate:
@@ -171,7 +171,7 @@ def _interp(x, xs, ys, fill_value=0., interpolate=True):
 	dr = xs[idx] - x
 	d = dl + dr
 	wl = dr / d
-	ret = tt.zeros(x.shape[:-1], dtype="float64")
+	ret = tt.zeros(x.shape, dtype="float64")
 	ret += wl * ys[idx - 1] + (1 - wl) * ys[idx]
 	ret = tt.switch(out_of_bounds, fill_value, ret)
 	return ret
