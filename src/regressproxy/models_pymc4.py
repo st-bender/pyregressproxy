@@ -256,7 +256,7 @@ class ProxyModel:
 
 	def get_value(self, t, interpolate=True):
 		t = tt.as_tensor_variable(t).astype("float64")
-		tp = t - self.lag
+		tp = t - self.lag / self.days_per_time_unit
 		proxy_val = _interp(
 			tp,
 			self.times, self.values,
